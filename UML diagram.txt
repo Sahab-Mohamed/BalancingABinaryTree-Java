@@ -1,0 +1,78 @@
++--------------------------------------+
+|             CollectionInterface       |
+|--------------------------------------|
+| - elements: List<T>                   |
+|--------------------------------------|
+| + add(element: T): boolean            |
+| + get(target: T): T                   |
+| + contains(target: T): boolean        |
+| + remove(target: T): boolean          |
+| + isFull(): boolean                   |
+| + isEmpty(): boolean                  |
+| + size(): int                         |
++--------------------------------------+
+                    ^
+                    |
++-------------------|------------------+
+|              BSTInterface              |
+|----------------------------------------|
+| - root: BSTNode<T>                      |
+| - comp: Comparator<T>                   |
+| - size: int                             |
+| - found: boolean                        |
+|----------------------------------------|
+| + min(): T                             |
+| + max(): T                             |
+| + getIterator(orderType: Traversal): Iterator<T>|
+| + getMaxTreeDepth(): int                |
+| + balanceTree(): void                  |
+| + getRoot(): BSTNode<T>                |
++----------------------------------------+
+                    ^
+                    |
++-------------------|------------------+
+|          BinarySearchTree<T>           |
+|----------------------------------------|
+| - root: BSTNode<T>                      |
+| - comp: Comparator<T>                   |
+| - size: int                             |
+| - found: boolean                        |
+|----------------------------------------|
+| + BinarySearchTree(size: int)          |
+| + BinarySearchTree(comp: Comparator<T>)|
+| + displayInOrder(): void               |
+| + inOrderDisplay(node: BSTNode<T>): void|
+| + inOrderForBalancing(node: BSTNode<T>, elements: List<T>): void|
+| + balanceTreeFromArray(elements: List<T>, start: int, end: int): BSTNode<T>|
+| + iterator(): Iterator<T>              |
+| + add(element: T): boolean              |
+| + addRecursive(node: BSTNode<T>, element: T): BSTNode<T>|
+| + get(target: T): T                    |
+| + contains(target: T): boolean         |
+| + remove(target: T): boolean           |
+| + isFull(): boolean                    |
+| + isEmpty(): boolean                   |
+| + size(): int                          |
+| + min(): T                             |
+| + max(): T                             |
+| + getIterator(orderType: Traversal): Iterator<T>|
+| + getMaxTreeDepth(): int                |
+| + maxTreeDepth(node: BSTNode<T>): int  |
++----------------------------------------+
+                    ^
+                    |
++-------------------|------------------+
+|             BSTNode<T>                  |
+|----------------------------------------|
+| - info: T                              |
+| - left: BSTNode<T>                      |
+| - right: BSTNode<T>                     |
+|----------------------------------------|
+| + BSTNode(info: T)                     |
+| + setInfo(info: T): void               |
+| + getInfo(): T                         |
+| + setLeft(link: BSTNode<T>): void      |
+| + setRight(link: BSTNode<T>): void     |
+| + getLeft(): BSTNode<T>                |
+| + getRight(): BSTNode<T>               |
++----------------------------------------+
